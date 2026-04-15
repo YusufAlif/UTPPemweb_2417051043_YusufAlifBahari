@@ -1,71 +1,350 @@
-body {
-    font-family: Arial;
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .navbar {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .cbox h1 {
+    color: white;
+}
+
+body.dark-mode .cbox h2,
+body.dark-mode .whoBox,
+body.dark-mode .dbox,
+body.dark-mode .dbox1 div,
+body.dark-mode .dbox2 div,
+body.dark-mode .sbox1,
+body.dark-mode .sbox2,
+body.dark-mode .sbox3,
+body.dark-mode .boxlagi ul li a,
+body.darkmode  .nbox ul li a {
+    border-color: #FAFAFA;
+    color: #FAFAFA;
+}
+
+body.dark-mode .nbox ul li a:hover,
+body.dark-mode .boxlagi ul li a:hover {
+    color: crimson;
+}
+
+body.dark-mode .darkbtn {
+    background-color: #FAFAFA;
+    color: #121212;
+    border: 1px solid #FAFAFA;
+}
+
+body{
+    font-family: 'syne' sans-serif;
     margin: 0;
-    background: #f5f5f5;
+    padding: 0;
+    background-color: #FAFAFA;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* navbar */
-nav {
+/* NAVBAR START */
+.navbar{
     display: flex;
-    justify-content: space-between;
-    background: #222;
-    color: white;
-    padding: 15px 30px;
+    flex-direction: row;
+    /* background-color: red; */
+    justify-content: right;
 }
 
-nav ul {
+.nbox{
+    justify-content: right;
+    /* background-color: blue; */
+    width: 100%;
     display: flex;
-    list-style: none;
+    flex-direction: row;
+}
+
+.nbox ul{
+    justify-content: right;
+    width: 100%;
+    /* padding: 10px; */
+    /* height: 100%; */
+    /* background-color: white; */
+    display: flex;
     gap: 15px;
+    list-style: none;
+    
 }
 
-nav a {
-    color: white;
+.nbox ul li a{
+    font-size: 20px;
     text-decoration: none;
+    color: black;
 }
 
-/* hero */
-.hero {
-    text-align: center;
-    margin-top: 100px;
+
+.nbox ul li a:hover{
+    text-decoration: underline;
 }
 
-/* card */
-.card {
-    max-width: 700px;
-    margin: 80px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+.darkbtnbox{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
 }
 
-/* skill bar */
-.bar {
-    width: 100%;
-    background: #ddd;
-    height: 10px;
-    border-radius: 10px;
-    margin-bottom: 15px;
+.darkbtn{
+    font-size: 15px;
+    background-color: transparent;
+    border-radius: 20px;
+    align-items: center;
+    height: 30px;
+    width: 60px;
+    margin-right: 5px;   
 }
 
-.bar div {
-    height: 100%;
-    background: #ff4d4d;
-    border-radius: 10px;
-}
-
-/* form */
-input, textarea {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-}
-
-button {
-    padding: 10px;
-    background: #ff4d4d;
+.darkbtn:hover{
+    background-color: black;
     color: white;
-    border: none;
+    transition: ease-in-out 0.3s;
+}
+/* NAVBAR END */
+
+/* INDEX CONTENT START */
+.content{
+    height: 80vh;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
 }
 
+.cbox{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: blue; */
+    align-items: center;
+}
+
+.cbox h1{
+    margin: 0;
+    font-size: 100px;
+    text-align: center;
+}
+
+.cbox h2{
+    border: 1px solid black;
+    padding: 2px;
+    width: 200px;
+    text-align: center;
+}
+
+.cbox p{
+    font-size: 20px;
+}
+
+.red{
+    color: crimson;
+}
+
+/* INDEX CONTENT END */
+
+/* about me start */
+p{
+    text-align: justify;
+    font-size: 20px;
+}
+
+.who{
+    
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: right; */
+}
+
+.whoBox{
+    border-top: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+.whoBox h1{
+    font-size: 200px;
+}
+
+.whoami{
+    font-size: 40px;
+    display: flex;
+    padding: 20px;
+    /* background-color: blue  ; */
+}
+
+.about p{
+    font-size: 30px;
+}
+
+.about{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* background-color: white; */
+}
+
+.dbox{
+    font-size: 30px;
+    border-top: 3px solid black;
+    /* background-color: red; */
+    display: flex;
+    /* gap: 100px; */
+    justify-content: space-around;
+}
+.dbox p{
+    padding-left: 20px;
+}
+
+.dbox1{
+    /* background-color: blue; */
+    width: 100%;
+}
+
+.dbox2{
+    /* background-color: red; */
+    width: 100%;
+}
+.fullname{
+    border: 1px solid black;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+.university{
+    border: 1px solid black;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+.batch{
+    border: 1px solid black;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+.major{
+    border: 1px solid black;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.location{
+    border: 1px solid black;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+.status{
+    border: 1px solid black;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+/* about me end */
+
+.skill{
+    margin-top: 100px;
+    display: flex;
+    /* background-color: black; */
+}
+
+.sbox{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    /* flex-direction: column; */
+    /* background-color: black; */
+}
+.sbox1{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 5px;
+    border: 3px solid black;
+    width: 100%;
+}
+.sbox2{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 5px;
+    border: 3px solid black;
+    width: 100%;
+}
+.sbox3{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 5px;
+    border: 3px solid black;
+    width: 100%;
+}
+
+.sbox span{
+    font-size: 20px;
+}
+
+.sImg{
+    margin: 20px;
+    height: 60px;
+    width: 55px;
+}
+
+.contact{
+    display: flex;
+    /* background-color: black; */
+    /* justify-content: space-between; */
+}
+
+.boxlagi{
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boxlagi ul{
+    font-size: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+
+.boxlagi ul li{
+    list-style: none;
+}
+
+.boxlagi ul li a{
+    color: black;
+    text-decoration: none;
+    align-items: center;
+}
+
+.boxlagi img{
+    padding: 5px;
+}
+
+.boxlagi ul li a:hover{
+    text-decoration: underline;
+}

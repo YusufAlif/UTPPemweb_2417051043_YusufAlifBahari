@@ -1,18 +1,18 @@
-function sayHello() {
-    alert("Halo! Selamat datang di portfolio Yusuf 😎");
+const darkBtn = document.querySelector('.darkbtn');
+const body = document.body;
+
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
 }
 
-function validateForm() {
-    let nama = document.getElementById("nama").value;
-    let email = document.getElementById("email").value;
-    let pesan = document.getElementById("pesan").value;
-
-    if (nama === "" || email === "" || pesan === "") {
-        alert("Semua field harus diisi!");
-        return false;
+darkBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        darkBtn.textContent = 'Light';
+    } else {
+        localStorage.setItem('theme', 'light');
+        darkBtn.textContent = 'Dark';
     }
-
-    alert("Pesan berhasil dikirim!");
-    return true;
-}
-
+});
